@@ -1,13 +1,14 @@
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/Home/index';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Silent Witness</h1>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
