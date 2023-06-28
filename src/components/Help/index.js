@@ -4,7 +4,8 @@ import { styled } from '@mui/system';
 import SearchIcon from '@mui/icons-material/Search';
 
 const StyledBox = styled(Box)({
-  marginTop: '20px',
+  marginTop: '50px',
+  paddingTop: '100px',
 });
 
 export default function Help() {

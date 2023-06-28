@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
 import { styled } from '@mui/system';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -13,6 +13,16 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const history = useHistory(); // Get the history object
+
+  const handleLogout = () => {
+    // Add logout functionality here
+    console.log("Logging out");
+
+    // After logging out, redirect to the login page
+    history.push("/login");
+  };
+
   return (
     <AppBar position="static">
       <StyledToolbar>
@@ -27,10 +37,7 @@ export default function Navbar() {
           <Button color="inherit" component={Link} to="/about">About</Button>
           <Button color="inherit" component={Link} to="/report">Report</Button>
           <Button color="inherit" component={Link} to="/help">Help</Button>
-          <Button color="inherit" onClick={() => {
-            // Add your logout functionality here
-            console.log("Logging out");
-          }}>Logout</Button>
+          <Button color="inherit" onClick={handleLogout}>Logout</Button>
         </div>
       </StyledToolbar>
     </AppBar>
