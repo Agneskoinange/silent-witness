@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import { TextField, Button, Checkbox, FormControlLabel, Typography, Container, Grid } from '@mui/material';
 import { styled } from '@mui/system';
+import { useHistory } from 'react-router-dom';
 
 const StyledContainer = styled(Container)({
   marginTop: '100px',
@@ -20,6 +21,7 @@ const StyledGrid = styled(Grid)({
 });
 
 const Login = () => {
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [account, setAccount] = useState('');
@@ -35,6 +37,8 @@ const Login = () => {
     event.preventDefault();
     console.log(`Username: ${username}, Password: ${password}`);
     // Add authentication logic 
+
+    history.push('/about');
   };
 
   const handleSignInMetaMask = async () => {
