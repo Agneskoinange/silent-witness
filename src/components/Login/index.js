@@ -44,6 +44,8 @@ const Login = () => {
   const handleSignInMetaMask = async () => {
     const accounts = await window.web3.eth.getAccounts();
     setAccount(accounts[0]);
+
+    history.push('/about');
   };
 
   return (
