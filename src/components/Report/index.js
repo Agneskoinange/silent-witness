@@ -17,7 +17,7 @@ export default function Report() {
 
   const handleReport = () => {
     console.log(`Location: ${location}, Incident: ${incident}, Details: ${details}`);
-    // Add your report submission functionality here
+    // Add the report submission functionality here
   };
 
   return (
