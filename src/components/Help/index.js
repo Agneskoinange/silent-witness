@@ -14,7 +14,7 @@ export default function Help() {
 
   const handleSend = () => {
     console.log(`Issue: ${issue}, Rating: ${rating}`);
-    // Add your issue sending functionality here
+    // Add issue sending functionality here
   };
 
   return (

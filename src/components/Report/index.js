@@ -7,7 +7,8 @@ const locations = ["New York", "Africa", "Nairobi", "Kisumu", "Nakuru", "Los Ang
 const incidents = ["Fire", "Flood", "Theft", "Accident", "Harassment", "Vandalism", "Corruption", "Other"];
 
 const StyledBox = styled(Box)({
-  marginTop: '20px',
+    marginTop: '50px',
+    paddingTop: '100px',
 });
 
 export default function Report() {

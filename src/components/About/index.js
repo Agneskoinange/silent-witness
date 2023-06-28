@@ -1,29 +1,34 @@
 import React from 'react';
-import { Typography, Container, Box } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import pic2 from '../../assets/pic2.jpg';
 
-const StyledContainer = styled(Container)({
+const StyledBox = styled(Box)({
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
   height: '100vh',
+  width: '100vw',
   padding: '20px',
   backgroundImage: `url(${pic2})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  boxSizing: 'border-box', 
 });
 
 const OverlayBox = styled(Box)({
-  backgroundColor: 'rgba(0, 0, 0, 0.6)',
-  color: 'white',
-  borderRadius: '15px',
-  padding: '30px',
-  margin: '0 auto',
+    marginTop: '100px',
+    backgroundColor: '#f4f6f8',
+    padding: '40px',
+    borderRadius: '10px',
+    backgroundImage: 'linear-gradient(to right, #ff9966 0%, #ff5e62 100%)', // a linear gradient background
+    color: 'white', // to make the text more visible on the dark background
+    width: '50vw',
 });
 
 const About = () => (
-  <StyledContainer maxWidth="xl">
-    <OverlayBox maxWidth="md">
+  <StyledBox>
+    <OverlayBox>
       <Typography variant="h3" align="center" gutterBottom>
         About Silent Witness
       </Typography>
@@ -40,8 +45,7 @@ const About = () => (
         To start using the Silent Witness app, you need to first create an account or log in. Once you are logged in, you can report incidents by clicking the 'Report' button on the navigation bar. Fill in the required fields, providing as much detail as possible, and then submit your report. Your report will be securely sent and processed promptly.
       </Typography>
     </OverlayBox>
-  </StyledContainer>
+  </StyledBox>
 );
 
 export default About;
-
