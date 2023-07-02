@@ -13,13 +13,12 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 }));
 
 export default function Navbar() {
-  const history = useHistory(); // Get the history object
-
+  const history = useHistory(); 
   const handleLogout = () => {
-    // Add logout functionality here
+
     console.log("Logging out");
 
-    // After logging out, redirect to the login page
+    
     history.push("/login");
   };
 
@@ -28,7 +27,7 @@ export default function Navbar() {
       <StyledToolbar>
         <StyledIconButton edge="start" color="inherit" aria-label="menu">
           {/* Replace "Logo" with your actual logo */}
-          <Typography variant="h6">Logo</Typography>
+          <Typography variant="h6">SILENT WITNESS</Typography>
         </StyledIconButton>
         <Typography variant="h6">
           {new Date().toLocaleDateString()}

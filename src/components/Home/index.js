@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import logo from '../../assets/logo.jpg';
-import pic3 from '../../assets/pic3.jpg';
+import logo1 from '../../assets/logo1.jpeg';
 
 const StyledContainer = styled('div')({
   display: 'flex',
@@ -30,11 +30,15 @@ const StyledRightContainer = styled('div')({
 
 const StyledLogo = styled('img')({
   width: '200px',
+  height: '200px',
+  borderRadius: '50%',
   marginBottom: '20px',
 });
 
 const StyledButton = styled(Button)({
-  marginTop: '10px',
+  marginTop: '50px',
+  marginBottom: '60px',
+  paddingBotton: '30px'
 });
 
 const Home = () => {
@@ -44,7 +48,7 @@ const Home = () => {
         <Typography variant="h4" component="h1">
           Welcome to Silent Witness
         </Typography>
-        <StyledLogo src={pic3} alt="Silent Witness Logo" />
+        <StyledLogo src={logo1} alt="Silent Witness Logo" />
         <Typography variant="body1">
           An anonymous reporting platform for those afraid to share in society
         </Typography>
