@@ -11,18 +11,8 @@ import Help from './components/Help';
 function App() {
   return (
     <Router>
-       // <Navbar />
+        <Navbar />
       <Switch>
-
-         <Route path="/" element={ <Navbar />} />
-
-        // <Route exact path="/" component={Home} />
-        // <Route path="/login" component={Login} />
-        // <Route path="/signup" component={Signup} />
-        // <Route path="/about" component={About} />
-        // <Route path="/report" component={Report} />
-        // <Route path="/help" component={Help} />
-
        <Route exact path="/home" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
