@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/SignUp';
@@ -11,8 +11,11 @@ import Help from './components/Help';
 function App() {
   return (
     <Router>
-       <Navbar />
-      <Switch>
+       // <Navbar />
+      <Routes>
+
+         <Route path="/nav" element={ <Navbar />} />
+
         // <Route exact path="/" component={Home} />
         // <Route path="/login" component={Login} />
         // <Route path="/signup" component={Signup} />
@@ -26,7 +29,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/report" element={<Report/>} />
         <Route path="/help" element={<Help/>} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
